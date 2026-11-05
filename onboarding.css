@@ -1,0 +1,46 @@
+/* Onboarding page layout overrides: keep both setup steps centered, fluid, and readable. */
+body:has(.setup-page) { min-width:320px; min-height:100vh; background:#f4f7fc; }
+.setup-page { display:flex; min-height:100vh; min-height:100dvh; flex-direction:column; align-items:center; justify-content:flex-start; padding:28px 20px 48px; background:radial-gradient(circle at 90% 8%,#e8f0ff 0,transparent 30%),var(--backdrop); }
+.setup-page .setup-brand { display:flex; width:fit-content; align-items:center; margin:0 auto 30px; }
+.setup-page .setup-card { width:min(100%,680px); margin:0 auto; padding:clamp(22px,5vw,46px); border:1px solid var(--line); border-radius:22px; background:var(--card); box-shadow:0 20px 60px rgba(31,51,82,.09); }
+.setup-page .setup-progress { display:block; margin:0 0 25px; color:var(--muted); font-size:.72rem; font-weight:800; letter-spacing:.09em; }
+.setup-page .progress-track { display:block; width:100%; height:6px; margin-top:10px; overflow:hidden; border-radius:99px; background:var(--line); }
+.setup-page .progress-track span { display:block; width:50%; height:100%; border-radius:inherit; background:var(--blue); }
+.setup-page .setup-card:has(.theme-choice) .progress-track span { width:100%; }
+.setup-page .setup-card > .eyebrow { margin:0 0 8px; font-size:.72rem; }
+.setup-page .setup-card > h1 { margin:0; color:var(--ink); font-size:clamp(1.7rem,5vw,2.35rem); line-height:1.2; letter-spacing:-.045em; }
+.setup-page .setup-copy { max-width:560px; margin:10px 0 22px; color:var(--muted); font-size:.92rem; line-height:1.65; }
+.setup-page .preference-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.setup-page .preference-option { position:relative; display:flex; min-width:0; min-height:140px; flex-direction:column; align-items:flex-start; padding:16px; border:1px solid var(--line); border-radius:14px; background:var(--card); color:var(--ink); cursor:pointer; }
+.setup-page .preference-option:hover { border-color:#9bb9f7; }
+.setup-page .preference-option:has(input:checked) { border-color:var(--blue); background:var(--accent-soft); }
+.setup-page .preference-option input { position:absolute; top:14px; right:14px; width:17px; height:17px; margin:0; accent-color:var(--blue); }
+.setup-page .preference-icon { display:grid; width:36px; height:36px; flex:0 0 36px; margin:0 0 9px; place-items:center; border-radius:10px; background:var(--accent-soft); color:var(--blue); }
+.setup-page .preference-option strong { font-size:.88rem; line-height:1.35; }
+.setup-page .preference-option small { margin-top:4px; color:var(--muted); font-size:.72rem; line-height:1.45; }
+.setup-page .setup-field { display:flex; flex-direction:column; gap:8px; margin-top:20px; }
+.setup-page .setup-field label { color:var(--ink); font-size:.83rem; font-weight:700; }
+.setup-page .setup-field input { width:100%; height:48px; padding:0 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); }
+.setup-page .setup-actions { display:flex; justify-content:space-between; gap:12px; margin-top:24px; }
+.setup-page .setup-actions .button { min-width:130px; min-height:46px; }
+.setup-page .setup-skip { margin:14px 0 0; color:var(--muted); font-size:.82rem; text-align:center; }
+.setup-page .setup-skip a { color:inherit; font-weight:700; text-decoration:none; }
+.setup-page .setup-skip a:hover { color:var(--blue); }
+.setup-page .demo-note { margin:14px 0 0; color:var(--muted); font-size:.75rem; line-height:1.5; text-align:center; }
+.setup-page .setting-row { display:flex; min-width:0; align-items:center; gap:13px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--ink); }
+.setup-page .setting-icon { display:grid; width:40px; height:40px; flex:0 0 40px; place-items:center; border-radius:12px; background:var(--accent-soft); color:var(--blue); }
+.setup-page .setting-text { display:flex; min-width:0; flex:1; flex-direction:column; gap:4px; }
+.setup-page .setting-text strong { color:var(--ink); font-size:.88rem; }
+.setup-page .setting-text small { color:var(--muted); font-size:.76rem; line-height:1.45; }
+.setup-page .setting-row > input { width:42px; height:23px; flex:0 0 42px; accent-color:var(--blue); }
+.setup-page .theme-choice { margin-top:22px; }
+.setup-page .theme-choice > strong { color:var(--ink); font-size:.9rem; }
+.setup-page .theme-choice > p { margin:5px 0 12px; color:var(--muted); font-size:.8rem; line-height:1.5; }
+.setup-page .theme-buttons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.setup-page .theme-choice-button { display:flex; min-height:48px; align-items:center; justify-content:center; gap:7px; padding:9px 12px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); text-align:center; text-decoration:none; font-size:.78rem; font-weight:700; line-height:1.4; }
+.setup-page .theme-choice-button.selected { border-color:var(--blue); background:var(--accent-soft); color:var(--blue); }
+.setup-page .setup-summary { display:flex; align-items:flex-start; gap:10px; margin-top:20px; padding:13px; border-radius:11px; background:var(--surface-soft); color:var(--muted); font-size:.75rem; line-height:1.5; }
+.setup-page .setup-summary i { flex:0 0 auto; color:var(--blue); font-size:1.05rem; }
+@media(max-width:560px){.setup-page{padding:18px 14px 30px}.setup-page .setup-brand{margin-bottom:20px}.setup-page .setup-card{padding:22px 18px;border-radius:17px}.setup-page .preference-grid{grid-template-columns:1fr}.setup-page .preference-option{min-height:112px}.setup-page .theme-buttons{grid-template-columns:1fr}.setup-page .setup-actions .button{min-width:0;flex:1;padding-right:12px;padding-left:12px}}
+@media(max-height:700px) and (min-width:561px){.setup-page{padding-top:16px;padding-bottom:24px}.setup-page .setup-brand{margin-bottom:16px}.setup-page .setup-card{padding-top:24px;padding-bottom:24px}}
+@media(prefers-reduced-motion:reduce){.setup-page *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
