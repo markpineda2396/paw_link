@@ -1,0 +1,35 @@
+/* CSS-only functionality and theme overrides for PawLink */
+.demo-note { margin: 14px 0 0; color: #8a97a8; font-size: .75rem; line-height: 1.5; text-align: center; }
+.setup-card > h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.25rem); letter-spacing: -.045em; }
+.setup-card > .eyebrow { margin-top: 20px; }
+.setup-progress { display: block; margin: 0 0 28px; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .09em; }
+.progress-track { display: block; height: 5px; margin-top: 10px; overflow: hidden; border-radius: 9px; background: var(--line); }
+.progress-track span { display: block; width: 50%; height: 100%; border-radius: inherit; background: var(--blue); }
+.setup-card:has(.theme-choice) .progress-track span { width: 100%; }
+.setup-skip a { color: inherit; text-decoration: none; }.setup-skip a:hover { color: var(--blue); }
+.setup-actions .button { min-width: 140px; }
+.theme-choice-button { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 8px; color: inherit; text-decoration: none; text-align: center; font-size: .78rem; }
+.theme-choice-button.selected { color: var(--blue); }
+/* CSS-only home theme switch; it is a checkbox, so no script is needed. */
+.theme-toggle { position: fixed; z-index: 6; top: 87px; right: 24px; width: 18px; height: 18px; accent-color: var(--blue); cursor: pointer; }
+.theme-toggle::before { content: "Dark"; position: absolute; right: 24px; top: -4px; padding: 4px 7px; border-radius: 6px; background: var(--surface); color: var(--ink-soft); font-size: .68rem; font-weight: 700; }
+.app-shell:has(#theme-toggle:checked) { --backdrop: #111827; --ink: #e6edf7; --muted: #9aa8bb; --line: #2a3749; --card: #1b2636; --surface: #1b2636; --surface-soft: #222f41; --ink-soft: #a5b2c4; --accent-soft: #263a5b; --shadow: 0 12px 32px rgba(0,0,0,.2); color-scheme: dark; }
+.app-shell:has(#theme-toggle:checked) .welcome-banner { background: linear-gradient(110deg,#243652,#292a42 70%,#3a2932); }
+.app-shell:has(#theme-toggle:checked) .welcome-banner h1 { color: var(--ink); }
+.app-shell:has(#theme-toggle:checked) .welcome-banner > div:first-child > p:not(.eyebrow) { color: var(--muted); }
+.app-shell:has(#theme-toggle:checked) .pet-badge,.app-shell:has(#theme-toggle:checked) .favorite-button { background: rgba(27,38,54,.94); color: #f2a0ad; }
+.app-shell:has(#theme-toggle:checked) .topbar-search input { color: var(--ink); }
+/* Target links open and close CSS-only profile, notification, and settings panels. */
+.css-popover { display: none; position: fixed; z-index: 8; top: 73px; right: 22px; width: min(350px, calc(100vw - 28px)); padding: 0; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); color: var(--ink); box-shadow: 0 18px 50px rgba(31,51,82,.16); }
+.css-popover:target { display: block; }
+.css-popover .popover-close { display: block; padding: 10px 17px; color: var(--blue); font-size: .76rem; font-weight: 700; text-decoration: none; }
+.css-popover.profile-popover { width: 220px; padding: 16px; }
+.css-popover.profile-popover > strong,.css-popover.profile-popover > span { display: block; margin-bottom: 7px; }
+.css-popover.profile-popover > span { color: var(--muted); font-size: .72rem; }
+.css-popover.profile-popover > a:not(.popover-close) { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--line); color: var(--blue); font-size: .75rem; font-weight: 700; text-decoration: none; }
+.settings-panel { top: 50%; right: 50%; width: min(460px, calc(100vw - 30px)); padding: 27px; transform: translate(50%,-50%); }
+.settings-panel:target { display: block; }
+.settings-panel h2 { margin: 0; font-size: 1.55rem; }.settings-description { margin: 6px 0 9px; color: var(--muted); font-size: .84rem; }
+.settings-panel .setting-row select { max-width: 100px; }.settings-panel .dialog-close { float: right; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 9px; background: var(--surface-soft); color: var(--ink-soft); text-decoration: none; }
+.theme-switch { display: inline-flex; cursor: pointer; }.theme-switch input { width: 42px; height: 23px; accent-color: var(--blue); }
+@media (max-width: 767px) { .theme-toggle { top: 19px; right: 73px; }.theme-toggle::before { display: none; }.css-popover { top: 65px; right: 12px; }.settings-panel { top: 50%; right: 50%; } }

@@ -1,38 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fafc"><meta name="description" content="Personalize your PawLink experience.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Choose your PawLink interests.">
   <title>Make PawLink yours | PawLink</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css"><link rel="stylesheet" href="css-only.css">
 </head>
 <body>
   <main class="setup-page">
     <a class="brand setup-brand" href="index.html"><i class="fa-solid fa-paw" aria-hidden="true"></i><span>PawLink</span></a>
     <section class="setup-card" aria-labelledby="setup-title">
-      <div class="setup-progress"><span id="step-label">STEP 1 OF 2</span><div class="progress-track"><span id="progress-fill"></span></div></div>
-      <div class="setup-step" data-step="1">
-        <p class="eyebrow">Welcome to the pack</p><h1 id="setup-title">What brings you to PawLink?</h1><p class="setup-copy">Choose the updates and pet services you care about. You can change these any time.</p>
-        <div class="preference-grid">
-          <label class="preference-option"><input type="checkbox" name="preferences" value="adoption" checked><span class="preference-icon"><i class="fa-solid fa-house-heart"></i></span><strong>Adoption</strong><small>Meet pets looking for a home</small></label>
-          <label class="preference-option"><input type="checkbox" name="preferences" value="lost-found" checked><span class="preference-icon"><i class="fa-solid fa-magnifying-glass"></i></span><strong>Lost &amp; found</strong><small>Help reunite pets and families</small></label>
-          <label class="preference-option"><input type="checkbox" name="preferences" value="community"><span class="preference-icon"><i class="fa-solid fa-people-group"></i></span><strong>Community pets</strong><small>Support animals in your area</small></label>
-          <label class="preference-option"><input type="checkbox" name="preferences" value="care"><span class="preference-icon"><i class="fa-solid fa-heart"></i></span><strong>Pet care tips</strong><small>Helpful local resources</small></label>
-        </div>
-        <div class="setup-field"><label for="setup-location">Your area</label><input id="setup-location" type="text" placeholder="City or ZIP code" autocomplete="address-level2"></div>
+      <p class="setup-progress">STEP 1 OF 2 <span class="progress-track"><span></span></span></p>
+      <p class="eyebrow">Welcome to the pack</p><h1 id="setup-title">What brings you to PawLink?</h1><p class="setup-copy">Choose the pet updates and services you care about. You can change these preferences any time.</p>
+      <div class="preference-grid">
+        <label class="preference-option"><input type="checkbox" checked><span class="preference-icon"><i class="fa-solid fa-house"></i></span><strong>Adoption</strong><small>Meet pets looking for a home</small></label>
+        <label class="preference-option"><input type="checkbox" checked><span class="preference-icon"><i class="fa-solid fa-magnifying-glass"></i></span><strong>Lost &amp; found</strong><small>Help reunite pets and families</small></label>
+        <label class="preference-option"><input type="checkbox"><span class="preference-icon"><i class="fa-solid fa-people-group"></i></span><strong>Community pets</strong><small>Support animals in your area</small></label>
+        <label class="preference-option"><input type="checkbox"><span class="preference-icon"><i class="fa-solid fa-heart"></i></span><strong>Pet care tips</strong><small>Helpful local resources</small></label>
       </div>
-      <div class="setup-step" data-step="2" hidden>
-        <p class="eyebrow">Just one more thing</p><h1>Stay in the loop</h1><p class="setup-copy">Choose how you’d like PawLink to keep you updated. You can adjust these settings later.</p>
-        <label class="setting-row"><span class="setting-icon"><i class="fa-regular fa-bell"></i></span><span class="setting-text"><strong>Pet alerts</strong><small>New lost, found, and adoption posts near you</small></span><input id="setup-notifications" type="checkbox" class="toggle-input" checked aria-label="Enable pet alerts"></label>
-        <div class="theme-choice"><strong>Choose your look</strong><p>Pick a theme that feels right for you.</p><div class="theme-buttons"><button type="button" class="theme-choice-button selected" data-theme-choice="light"><i class="fa-regular fa-sun"></i> Light</button><button type="button" class="theme-choice-button" data-theme-choice="dark"><i class="fa-regular fa-moon"></i> Dark</button></div></div>
-        <div class="setup-summary"><i class="fa-solid fa-shield-heart"></i><span>Your choices are saved on this device and can be changed in settings.</span></div>
-      </div>
-      <div class="setup-actions"><button class="button button-outline" id="setup-back" type="button" hidden><i class="fa-solid fa-arrow-left"></i> Back</button><button class="button button-primary" id="setup-next" type="button">Continue <i class="fa-solid fa-arrow-right"></i></button></div>
-      <button class="setup-skip" id="setup-skip" type="button">Skip for now</button>
+      <div class="setup-field"><label for="setup-location">Your area</label><input id="setup-location" type="text" placeholder="City or ZIP code" autocomplete="address-level2"></div>
+      <div class="setup-actions"><a class="button button-outline" href="register.html">Back</a><a class="button button-primary" href="onboarding-notifications.html">Continue <i class="fa-solid fa-arrow-right"></i></a></div>
+      <p class="setup-skip"><a href="dashboard.html">Skip for now</a></p>
+      <p class="demo-note">Preferences are for this demo screen only and are not saved.</p>
     </section>
   </main>
-  <script src="app.js"></script>
 </body>
 </html>

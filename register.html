@@ -1,37 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="Create your PawLink account to help pets find their way home.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc"><meta name="description" content="Create your PawLink account to help pets find their way home.">
   <title>Create an Account | PawLink</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css"><link rel="stylesheet" href="css-only.css">
 </head>
 <body>
   <main class="container register-container">
     <a class="brand register-brand" href="index.html" aria-label="PawLink home"><i class="fa-solid fa-paw" aria-hidden="true"></i><span>PawLink</span></a>
     <section class="register-content" aria-labelledby="register-title">
       <div class="register-heading"><p class="eyebrow">Join the PawLink community</p><h1 id="register-title">Create your account</h1><p>Help lost pets get home and discover pets looking for a family.</p></div>
-      <form class="register-form" id="register-form">
-        <div class="form-field"><label for="full-name">Full name</label><input id="full-name" name="full_name" type="text" autocomplete="name" placeholder="Your name" required></div>
-        <div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-        <div class="form-field"><label for="phone">Phone number <span class="optional">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></div>
-        <div class="form-field form-field-half"><label for="age">Age</label><input id="age" name="age" type="number" min="13" max="120" inputmode="numeric" placeholder="Age" required></div>
-        <div class="form-field form-field-half"><label for="city">City or area</label><input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Your city" required></div>
-        <div class="form-field form-field-full"><label for="password">Create password</label><input id="password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required><small class="field-hint">Use at least 8 characters.</small></div>
-        <div class="form-field form-field-full"><label for="interest">I'm here to</label><select id="interest" name="interest" required><option value="" disabled selected>Choose what interests you</option><option value="adopt">Adopt a pet</option><option value="lost">Report a lost pet</option><option value="found">Report a found pet</option><option value="help">Support my local pet community</option></select></div>
-        <button class="button button-primary submit-button form-field-full" type="submit">Create account <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      <form class="register-form" action="onboarding.html" method="get">
+        <div class="form-field"><label for="full-name">Full name</label><input id="full-name" type="text" autocomplete="name" placeholder="Your name" required></div>
+        <div class="form-field"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+        <div class="form-field"><label for="phone">Phone number <span class="optional">(optional)</span></label><input id="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></div>
+        <div class="form-field form-field-half"><label for="age">Age</label><input id="age" type="number" min="13" max="120" inputmode="numeric" placeholder="Age" required></div>
+        <div class="form-field form-field-half"><label for="city">City or area</label><input id="city" type="text" autocomplete="address-level2" placeholder="Your city" required></div>
+        <div class="form-field form-field-full"><label for="password">Create password</label><input id="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required><small class="field-hint">Use at least 8 characters.</small></div>
+        <div class="form-field form-field-full"><label for="interest">I'm here to</label><select id="interest" required><option value="" disabled selected>Choose what interests you</option><option>Adopt a pet</option><option>Report a lost pet</option><option>Report a found pet</option><option>Support my local pet community</option></select></div>
+        <button class="button button-primary submit-button form-field-full" type="submit">Continue to preferences <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
       </form>
       <p class="signup-prompt register-prompt">Already have an account? <a class="text-link" href="login.html">Log in</a></p>
-      <p class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details stay private and secure.</p>
-      <p class="demo-note">Demo experience: your profile stays in this browser only.</p>
+      <p class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Static demo: account details are not saved.</p>
     </section>
   </main>
-  <script src="app.js"></script>
 </body>
 </html>

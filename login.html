@@ -1,40 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="Log in to your PawLink account.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc"><meta name="description" content="Log in to your PawLink account.">
   <title>Log In | PawLink</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css"><link rel="stylesheet" href="css-only.css">
 </head>
 <body>
   <main class="container login-container">
-    <a class="brand login-brand" href="index.html" aria-label="PawLink home">
-      <i class="fa-solid fa-paw" aria-hidden="true"></i><span>PawLink</span>
-    </a>
+    <a class="brand login-brand" href="index.html" aria-label="PawLink home"><i class="fa-solid fa-paw" aria-hidden="true"></i><span>PawLink</span></a>
     <section class="login-content">
       <div class="login-heading"><h1>Welcome Back!</h1><p>Log in to your account</p></div>
-      <form class="login-form" id="login-form">
-        <label for="email">Email or Phone Number</label>
-        <input id="email" name="email" type="text" autocomplete="username" placeholder="Enter your email or phone" required>
+      <form class="login-form" action="dashboard.html" method="get">
+        <label for="email">Email or Phone Number</label><input id="email" type="text" autocomplete="username" placeholder="Enter your email or phone" required>
         <div class="password-label-row"><label for="password">Password</label><a class="text-link" href="#forgot-password">Forgot password?</a></div>
-        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
         <button class="button button-primary submit-button" type="submit">Log in</button>
       </form>
       <div class="divider" role="separator" aria-label="or"><span>or</span></div>
-      <div class="social-buttons">
-        <button class="button social-button" type="button"><i class="fa-brands fa-google google-icon" aria-hidden="true"></i>Continue with Google</button>
-        <button class="button social-button" type="button"><i class="fa-brands fa-facebook-f facebook-icon" aria-hidden="true"></i>Continue with Facebook</button>
-      </div>
+      <div class="social-buttons"><a class="button social-button" href="dashboard.html"><i class="fa-brands fa-google google-icon" aria-hidden="true"></i>Continue with Google</a><a class="button social-button" href="dashboard.html"><i class="fa-brands fa-facebook-f facebook-icon" aria-hidden="true"></i>Continue with Facebook</a></div>
       <p class="signup-prompt">Don't have an account? <a class="text-link" href="register.html">Sign up</a></p>
-      <p class="demo-note">Demo experience: enter any email and password to continue.</p>
+      <p class="demo-note">Static demo only: this form checks required fields but does not authenticate or store an account.</p>
     </section>
   </main>
-  <script src="app.js"></script>
 </body>
 </html>
