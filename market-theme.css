@@ -1,0 +1,69 @@
+/* Match the shop's colors to the shared PawLink dashboard theme. */
+#theme-toggle:checked ~ .dashboard-main,
+#theme-toggle:checked ~ .sidebar {
+  --backdrop: #101722;
+  --ink: #f1f5fb;
+  --muted: #b3bfd0;
+  --ink-soft: #b3bfd0;
+  --line: #344256;
+  --card: #1b2635;
+  --surface: #202d3e;
+  --surface-soft: #263448;
+  --accent-soft: #263448;
+  --shadow: 0 12px 32px rgba(0,0,0,.2);
+}
+#theme-toggle:checked ~ .dashboard-main { background:var(--backdrop); color:var(--ink); }
+#theme-toggle:checked ~ .sidebar { background:var(--card); color:var(--ink); }
+#theme-toggle:checked ~ .dashboard-main .topbar { background:var(--card); }
+#theme-toggle:checked ~ .dashboard-main .shop-hero {
+  background:linear-gradient(115deg,#302b27 0%,#282a29 48%,#202d28 100%);
+}
+#theme-toggle:checked ~ .dashboard-main .shop-hero h1,
+#theme-toggle:checked ~ .dashboard-main .shop-toolbar h2 { color:var(--ink); }
+#theme-toggle:checked ~ .dashboard-main .shop-hero p:not(.eyebrow),
+#theme-toggle:checked ~ .dashboard-main .shop-toolbar p,
+#theme-toggle:checked ~ .dashboard-main .shop-footer { color:var(--muted); }
+#theme-toggle:checked ~ .dashboard-main .shop-card,
+#theme-toggle:checked ~ .dashboard-main .order-card {
+  border-color:var(--line);
+  background:var(--card);
+  color:var(--ink);
+}
+#theme-toggle:checked ~ .dashboard-main .shop-price,
+#theme-toggle:checked ~ .dashboard-main .shop-card h3,
+#theme-toggle:checked ~ .dashboard-main .order-head strong,
+#theme-toggle:checked ~ .dashboard-main .order-total { color:var(--ink); }
+#theme-toggle:checked ~ .dashboard-main .shop-rating span,
+#theme-toggle:checked ~ .dashboard-main .order-card p { color:var(--muted); }
+#theme-toggle:checked ~ .dashboard-main .icon-button,
+#theme-toggle:checked ~ .dashboard-main .quantity-control button {
+  border-color:var(--line);
+  background:var(--surface);
+  color:var(--ink);
+}
+#theme-toggle:checked ~ .dashboard-main .icon-button:hover { background:var(--surface-soft); }
+#theme-toggle:checked ~ .sidebar .theme-control .switch-track { background:var(--blue); }
+#theme-toggle:checked ~ .sidebar .theme-control .switch-track::after { transform:translateX(15px); }
+html[data-theme="dark"] { color-scheme:dark; }
+html[data-theme="dark"] .shop-dialog { color:#f1f5fb; }
+html[data-theme="dark"] .shop-dialog .dialog-card {
+  border-color:#344256;
+  background:#1b2635;
+  color:#f1f5fb;
+}
+html[data-theme="dark"] .shop-dialog .dialog-lead,
+html[data-theme="dark"] .shop-dialog .preview-description,
+html[data-theme="dark"] .shop-dialog .label-optional,
+html[data-theme="dark"] .shop-dialog .cart-item-info>span { color:#b3bfd0; }
+html[data-theme="dark"] .shop-dialog input:not([type=file]),
+html[data-theme="dark"] .shop-dialog textarea,
+html[data-theme="dark"] .shop-dialog .checkout-row input,
+html[data-theme="dark"] .shop-dialog .quantity-control button,
+html[data-theme="dark"] .shop-dialog .dialog-close {
+  border-color:#344256;
+  background:#202d3e;
+  color:#f1f5fb;
+}
+html[data-theme="dark"] .shop-dialog .cart-item { border-color:#344256; }
+html[data-theme="dark"] .shop-dialog .cart-total { color:#f1f5fb; }
+html[data-theme="dark"] .shop-dialog .success-icon { background:#253e2e; color:#7fd295; }
